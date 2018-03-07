@@ -1,6 +1,6 @@
 {
     "languageModel": {
-        "invocationName": "conf rooms",
+        "invocationName": "john",
         "intents": [
             {
                 "name": "AMAZON.CancelIntent",
@@ -21,6 +21,8 @@
                 "name": "FreeConfRooms",
                 "slots": [],
                 "samples": [
+                    "If there is a free conf room",
+                    "Find free conf room",
                     "Find me free conf room",
                     "Are there any free conf rooms now"
                 ]
@@ -29,69 +31,42 @@
                 "name": "RoomBooking",
                 "slots": [
                     {
-                        "name": "room",
-                        "type": "AMAZON.Color",
-                        "samples": [
-                            "{room}",
-                            "The {room} one"
-                        ]
-                    },
-                    {
                         "name": "period",
                         "type": "AMAZON.DURATION",
                         "samples": [
-                            "For {period}  from now"
+                            "For {period}"
                         ]
                     },
                     {
-                        "name": "start_time",
-                        "type": "AMAZON.TIME",
-                        "samples": [
-                            "{start_time}",
-                            "Since {start_time}"
-                        ]
-                    },
-                    {
-                        "name": "end_time",
-                        "type": "AMAZON.TIME",
-                        "samples": [
-                            "Until {end_time}",
-                            "{end_time}"
-                        ]
-                    },
-                    {
-                        "name": "size",
-                        "type": "AMAZON.LITERAL",
-                        "samples": [
-                            "{size}"
-                        ]
+                        "name": "room",
+                        "type": "ROOM_NAME"
                     }
                 ],
                 "samples": [
-                    "Book {size} conf room from {start_time} to {end_time}",
-                    "Book {size} conf room for {period}",
-                    "Book {room} conf room from {start_time} to {end_time}",
-                    "Book {room} conf room for {period}"
+                    "Book a conf room for {period}",
+                    "Book a {room} conf room",
+                    "Book a conf room",
+                    "Book a {room} conf room for {period}"
                 ]
             }
         ],
         "types": [
             {
-                "name": "AMAZON.Color",
+                "name": "ROOM_NAME",
                 "values": [
                     {
                         "id": "",
                         "name": {
-                            "value": "purple",
+                            "value": "kebab",
                             "synonyms": [
-                                "kebab"
+                                "purple"
                             ]
                         }
                     },
                     {
-                        "id": "",
+                        "id": "xwing",
                         "name": {
-                            "value": "orange",
+                            "value": "X-wing",
                             "synonyms": []
                         }
                     },
@@ -128,48 +103,21 @@
                 "prompts": {},
                 "slots": [
                     {
-                        "name": "room",
-                        "type": "AMAZON.Color",
-                        "confirmationRequired": false,
-                        "elicitationRequired": true,
-                        "prompts": {
-                            "elicitation": "Elicit.Slot.684753561772.1251698727781"
-                        }
-                    },
-                    {
                         "name": "period",
                         "type": "AMAZON.DURATION",
                         "confirmationRequired": false,
                         "elicitationRequired": true,
                         "prompts": {
-                            "elicitation": "Elicit.Slot.684753561772.652318167387"
+                            "elicitation": "Elicit.Slot.385524803489.1209030238363"
                         }
                     },
                     {
-                        "name": "start_time",
-                        "type": "AMAZON.TIME",
+                        "name": "room",
+                        "type": "ROOM_NAME",
                         "confirmationRequired": false,
                         "elicitationRequired": true,
                         "prompts": {
-                            "elicitation": "Elicit.Slot.684753561772.1076496865543"
-                        }
-                    },
-                    {
-                        "name": "end_time",
-                        "type": "AMAZON.TIME",
-                        "confirmationRequired": false,
-                        "elicitationRequired": true,
-                        "prompts": {
-                            "elicitation": "Elicit.Slot.684753561772.532094232870"
-                        }
-                    },
-                    {
-                        "name": "size",
-                        "type": "AMAZON.LITERAL",
-                        "confirmationRequired": false,
-                        "elicitationRequired": true,
-                        "prompts": {
-                            "elicitation": "Elicit.Slot.684753561772.1261892666950"
+                            "elicitation": "Elicit.Slot.1511157530656.869533581075"
                         }
                     }
                 ]
@@ -178,25 +126,7 @@
     },
     "prompts": [
         {
-            "id": "Elicit.Slot.684753561772.1076496865543",
-            "variations": [
-                {
-                    "type": "PlainText",
-                    "value": "Since when?"
-                }
-            ]
-        },
-        {
-            "id": "Elicit.Slot.684753561772.532094232870",
-            "variations": [
-                {
-                    "type": "PlainText",
-                    "value": "Until when?"
-                }
-            ]
-        },
-        {
-            "id": "Elicit.Slot.684753561772.652318167387",
+            "id": "Elicit.Slot.385524803489.1209030238363",
             "variations": [
                 {
                     "type": "PlainText",
@@ -205,20 +135,11 @@
             ]
         },
         {
-            "id": "Elicit.Slot.684753561772.1251698727781",
+            "id": "Elicit.Slot.1511157530656.869533581075",
             "variations": [
                 {
                     "type": "PlainText",
-                    "value": "Which one?"
-                }
-            ]
-        },
-        {
-            "id": "Elicit.Slot.684753561772.1261892666950",
-            "variations": [
-                {
-                    "type": "PlainText",
-                    "value": "What size?"
+                    "value": "Which conf room?"
                 }
             ]
         }
