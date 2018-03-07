@@ -55,7 +55,7 @@
                 "name": "ROOM_NAME",
                 "values": [
                     {
-                        "id": "",
+                        "id": "kebab",
                         "name": {
                             "value": "kebab",
                             "synonyms": [
@@ -71,24 +71,26 @@
                         }
                     },
                     {
-                        "id": "",
+                        "id": "blue",
                         "name": {
                             "value": "blue",
                             "synonyms": []
                         }
                     },
                     {
-                        "id": "",
+                        "id": "green",
                         "name": {
                             "value": "green",
                             "synonyms": []
                         }
                     },
                     {
-                        "id": "",
+                        "id": "red",
                         "name": {
                             "value": "red",
-                            "synonyms": []
+                            "synonyms": [
+                                "bloody"
+                            ]
                         }
                     }
                 ]
