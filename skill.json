@@ -1,6 +1,6 @@
 {
     "languageModel": {
-        "invocationName": "john",
+        "invocationName": "conf room manager",
         "intents": [
             {
                 "name": "AMAZON.CancelIntent",
@@ -47,6 +47,20 @@
                     "Book a {room} conf room",
                     "Book a conf room",
                     "Book a {room} conf room for {period}"
+                ]
+            },
+            {
+                "name": "RestoreSession",
+                "slots": [],
+                "samples": [
+                    "Restore previous session "
+                ]
+            },
+            {
+                "name": "DeleteSession",
+                "slots": [],
+                "samples": [
+                    "Delete previous session"
                 ]
             }
         ],
