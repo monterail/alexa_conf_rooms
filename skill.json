@@ -50,18 +50,28 @@
                 ]
             },
             {
-                "name": "RestoreSession",
+                "name": "RestoreBookingSession",
                 "slots": [],
                 "samples": [
                     "Restore previous session "
                 ]
             },
             {
-                "name": "DeleteSession",
+                "name": "DeleteBookingSession",
                 "slots": [],
                 "samples": [
                     "Delete previous session"
                 ]
+            },
+            {
+                "name": "AMAZON.YesIntent",
+                "slots": [],
+                "samples": []
+            },
+            {
+                "name": "AMAZON.NoIntent",
+                "slots": [],
+                "samples": []
             }
         ],
         "types": [
