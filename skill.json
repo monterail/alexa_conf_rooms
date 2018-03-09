@@ -48,30 +48,6 @@
                     "Book a conf room",
                     "Book a {room} conf room for {period}"
                 ]
-            },
-            {
-                "name": "RestoreBookingSession",
-                "slots": [],
-                "samples": [
-                    "Restore previous session "
-                ]
-            },
-            {
-                "name": "DeleteBookingSession",
-                "slots": [],
-                "samples": [
-                    "Delete previous session"
-                ]
-            },
-            {
-                "name": "AMAZON.YesIntent",
-                "slots": [],
-                "samples": []
-            },
-            {
-                "name": "AMAZON.NoIntent",
-                "slots": [],
-                "samples": []
             }
         ],
         "types": [
